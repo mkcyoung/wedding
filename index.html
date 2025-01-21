@@ -8,49 +8,59 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>We're Getting Married!</h1>
-  </header>
-  <section id="photo1">
-    <img src="photo1.jpg" alt="A photo of us" />
-  </section>
-  <section id="details">
-    <h1>June 28, 2025</h1>
-    <p>
-      The wedding will be held on Saturday, June 28, 2025. 
-      We will start with a ceremony for immediate family, then
-      move to Lola for the reception. Dress code will be cocktail attire.
-    </p>
-    <div id="schedule-section">
+  <div id="main-content">
+    <header>
+      <h1>We're Getting Married!</h1>
+      <img src="photos/booth1.jpeg" alt="We are so cute." />
+    </header>
+    <section id="date-and-rsvp">
+      <h1>June 28, 2025</h1>
+      <a class="button" href="/rsvp.html">RSVP</a>
+      <p id="description">
+        The wedding will be held on June 28, 2025 in Salt Lake City.
+        The ceremony will be held at the Grand America with family, 
+        followed by a reception at Lola, where we will celebrate with friends.
+      </p>
+    </section>
+  </div>
+  <section id="details-wrapper">
+    <h2>Weekend Itinerary</h2>
+    <div id="details">
       <div class="schedule-item">
-        <h2>Ceremony</h2>
-        <p>4:00 PM</p>
+        <h3>
+          Friday, June 27
+        </h3>
+        <div>
+          A night out on the town for all interested.
+        </div>
       </div>
       <div class="schedule-item">
-        <h2>Reception</h2>
-        <p>5:00 PM</p>
+        <h3>
+          Saturday, June 28
+        </h3>
+        <div>
+          Join us for a reception replete with delicious food, drinks, and dancing. Details on time/location to come.
+        </div>
+      </div>
+      <div class="schedule-item">
+        <h3>
+          Sunday, June 29
+        </h3>
+        <div>
+          ...
+        </div>
       </div>
     </div>
-    <a class="button" href="/rsvp.html">RSVP</a>
   </section>
-  <section id="schedule">
-    <h2>Schedule</h2>
-    <ul>
-      <li>4:00 PM - Ceremony</li>
-      <li>5:00 PM - Reception</li>
-      <li>7:00 PM - Dance Party</li>
-    </ul>
+  <section id="registry-wrapper">
+    <div id="registry">
+      <h2>Registry</h2>
+      <p>
+        Details to come.
+      </p>
+      <!-- <a href="https://registry-link.com" target="_blank">View Our Registry</a> -->
+    </div>
   </section>
-  <section id="photo2">
-    <img src="photo2.jpg" alt="Another photo of us" />
-  </section>
-  <section id="registry">
-    <h2>Our Registry</h2>
-    <a href="https://registry-link.com" target="_blank">View Our Registry</a>
-  </section>
-  <footer>
-    <a class="button" href="/rsvp.html">RSVP</a>
-  </footer>
   <script src="script.js"></script>
 </body>
 </html>
