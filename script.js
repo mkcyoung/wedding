@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const name = formData.get('name');
         const email = formData.get('email');
         const message = formData.get('message');
+        const attending = formData.get('attending');
         const plusOne = formData.get('plus-one');
 
         const gotcha = formData.get('_gotcha');
@@ -48,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //       name,
         //       email,
         //       message,
+        //       attending,
         //       plusOne,
         //       subject: `${name}'s WEDDING RSVP`
         //     })
