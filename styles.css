@@ -5,6 +5,16 @@ body {
     margin: 0 auto;
 }
 
+nav {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    background-color: #f0e9dd;
+    padding: .75rem 2rem;
+}
+
 #main-content {
     padding: 0 10%;
     max-width: 1200px;
