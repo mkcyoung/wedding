@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //   });
 
         //   if (response.ok) {
-        //     window.location.href = '/thankyou.html';
+        //     window.location.href = '/thankyou';
         //   } else {
         //     formStatus.classList.remove('hidden');
         //     formStatus.innerHTML = 'Something went wrong. Please try again.';

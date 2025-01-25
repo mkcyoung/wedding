@@ -5,27 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RSVP Baby!!</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
   </head>
 <body class="primary-bg">
   <nav>
     <span>Mike & Tay</span>
-    <a class="button" href="/index.html">Home</a>
+    <a class="button" href="/">Home</a>
   </nav>
   <main id="thank-you-page">
     <h1>Can't wait to see you there!</h1>
-    <div>(assuming you said yes...)</div>
+    <div>(If you said no the confetti was meant to make you feel shame)</div>
     <div>Check out our registr...</div>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
   <script>
     window.addEventListener('load', () => {
-      // A single quick burst
       confetti({
-        particleCount: 200,
-        spread: 90,
-        origin: { y: 0.6 }
+        particleCount: 75,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1, y: 0.6 },
+      });
+      confetti({
+        particleCount: 75,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0, y: 0.6 },
+      });
+      confetti({
+        particleCount: 150,
+        angle: 90,
+        spread: 40,
+        origin: { y: 1 },
+        startVelocity: 80,
       });
     });
   </script>
