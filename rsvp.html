@@ -14,7 +14,8 @@
   </nav>
   <main id="rsvp-page">
     <h1>RSVP</h1>
-    <form id="rsvp-form">
+    <form id="rsvp-form" action="https://formspree.io/f/xbldlnwy" method="POST">
+      <div id="form-status"" class="hidden"></div>
       <div class="form-item">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>
@@ -26,9 +27,27 @@
       </div>
 
       <div class="form-item">
-        <label for="message">Message</label>
-        <textarea id="message" name="message"></textarea>
+        <label for="attending">Attending?</label>
+        <select id="attending" name="attending" required>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
       </div>
+
+      <div class="form-item" id="plus-one-wrapper">
+        <label for="plus-one">Bringing anyone?</label>
+        <select id="plus-one" name="plus-one" required>
+          <option value="alone">Nope</option>
+          <option value="plus-one">+1</option>
+        </select>
+      </div>
+
+      <div class="form-item">
+        <label for="message">Message (optional)</label>
+        <textarea id="message" name="message" placeholder="You could say something like 'You're the hottest couple ever' if you want..."></textarea>
+      </div>
+
+      <input type="text" name="_gotcha" style="display: none;" tabindex="-1" autocomplete="nope" />
 
       <button type="submit">Submit</button>
     </form>

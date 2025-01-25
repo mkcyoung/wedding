@@ -1,40 +1,68 @@
-// document.getElementById('rsvp-btn').addEventListener('click', () => {
-//     const modal = document.getElementById('rsvp-modal');
-//     modal.classList.toggle('hidden');
-//   });
-  
-// // Optional: Close modal when clicking outside or adding a close button
-// document.addEventListener('click', (event) => {
-//     const modal = document.getElementById('rsvp-modal');
-//     if (!modal.contains(event.target) && !event.target.matches('#rsvp-btn')) {
-//     modal.classList.add('hidden');
-//     }
-// });
+document.addEventListener('DOMContentLoaded', () => {
+    const rsvpForm = document.getElementById('rsvp-form');
+    const formStatus = document.getElementById('form-status');
 
-// Handle form submission
-document.getElementById('rsvp-form')?.addEventListener('submit', (event) => {
-    event.preventDefault();
+    const attendingInput = document.getElementById('attending');
+    const plusOneContainer = document.getElementById('plus-one-wrapper');
 
-    const formData = new FormData(event.target);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message');
+    if (attendingInput && plusOneContainer) {
+        attendingInput.addEventListener('change', (event) => {
+            if (event.target.value === 'yes') {
+                plusOneContainer.classList.remove('hidden');
+            } else {
+                plusOneContainer.classList.add('hidden');
+            }
+        });
+    }
 
-    // // Use a service like Formspree for email handling
-    // fetch('https://formspree.io/f/YOUR_FORM_ID', {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify({ name, email, message }),
-    // })
-    // .then((response) => {
-    //     if (response.ok) {
-    //     alert('RSVP submitted successfully!');
-    //     event.target.reset();
-    //     } else {
-    //     alert('Something went wrong. Please try again.');
-    //     }
-    // })
-    // .catch((error) => {
-    //     alert('Error: ' + error.message);
-    // });
+
+    if (rsvpForm) {
+    rsvpForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        
+        // Gather form data
+        const formData = new FormData(event.target);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const message = formData.get('message');
+        const plusOne = formData.get('plus-one');
+
+        const gotcha = formData.get('_gotcha');
+
+        // If the gotcha field is filled, it’s likely a spam bot
+        if (gotcha) {
+            formStatus.classList.remove('hidden');
+            formStatus.innerHTML = "Sorry, no 🤖 allowed here.";
+            return;
+        }
+        
+        // try {
+        //   // Send data to Formspree
+        //   const response = await fetch(event.target.action, {
+        //     method: rsvpForm.method,
+        //     headers: { 
+        //       'Content-Type': 'application/json', 
+        //       'Accept': 'application/json'
+        //     },
+        //     body: JSON.stringify({
+        //       name,
+        //       email,
+        //       message,
+        //       plusOne,
+        //       subject: `${name}'s WEDDING RSVP`
+        //     })
+        //   });
+
+        //   if (response.ok) {
+        //     window.location.href = '/thankyou.html';
+        //   } else {
+        //     formStatus.classList.remove('hidden');
+        //     formStatus.innerHTML = 'Something went wrong. Please try again.';
+        //   }
+        // } catch (error) {
+        //   formStatus.classList.remove('hidden');
+        //   formStatus.innerHTML = `Error: ${error.message}`;
+        // }
+    });
+    }
 });
