@@ -79,7 +79,7 @@ nav {
         width: 100%;
         padding: 0.75rem;
         border: none;
-        background: #f2f5efd2;
+        background: #f0e9dd4e;
         border-radius: 5px;
         font-family: inherit;
         font-size: 1rem;
@@ -95,8 +95,6 @@ nav {
       #rsvp-form select:focus,
       #rsvp-form textarea:focus {
         outline: none;
-        /* A dusty sage green for the border */
-        /* border-color: #aebfad; */
         /* Subtle glow in a dusty sage tone */
         box-shadow: 0 0 2px 2px rgba(174, 191, 173, 0.771);
       }
@@ -104,7 +102,7 @@ nav {
       /* Textarea can be slightly taller by default */
       #rsvp-form textarea {
         min-height: 120px;
-        resize: vertical; /* let users expand if needed */
+        resize: vertical;
       }
       
       /* Button styles */
