@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -77,7 +83,7 @@ nav {
         gap: 1rem;
         align-items: center;
         width: 100%;
-        max-width: 400px;
+        max-width: 450px;
         padding: 1.5rem;
         background-color: white;
         border-radius: 8px;
@@ -206,6 +212,34 @@ nav {
     }
 }
 
+#thank-you-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+
+    h1 {
+        background-image: linear-gradient(#9c886a, #5b4b33);
+        color: transparent;
+        background-clip: text;
+    }
+    .subtitle {
+        font-size: 1rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        color: #666;
+    }
+
+    #thank-you-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        max-width: 800px;
+    }
+}
+
 header {
     text-align: center;
     padding: 2.5rem;
@@ -306,7 +340,7 @@ img {
         max-width: 100%;
     }
     #rsvp-page {
-        margin: 1rem 2rem;
+        margin: 0.5rem 1rem;
     }
     #details-wrapper {
         margin-top: 1rem;

@@ -1,46 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RSVP Baby!!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Thanks for RSVPing</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
   </head>
-<body class="primary-bg">
-  <nav>
-    <span>Mike & Tay</span>
-    <a class="nav-link" href="/">Home</a>
-  </nav>
-  <main id="thank-you-page">
-    <h1>Can't wait to see you there!</h1>
-    <div>(If you said no the confetti was meant to make you feel shame)</div>
-    <div>Check out our registr...</div>
-  </main>
+  <body class="primary-bg">
+    <nav>
+      <span>Mike & Tay</span>
+      <a class="nav-link" href="/">Home</a>
+    </nav>
 
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-  <script>
-    window.addEventListener('load', () => {
-      confetti({
-        particleCount: 75,
-        angle: 120,
-        spread: 55,
-        origin: { x: 1, y: 0.6 },
+    <main id="thank-you-page">
+      <div id="thank-you-content">
+        <h1>Can't Wait to See You There!</h1>
+        <p class="subtitle">(If you're not coming, the confetti is meant to evoke feelings of deep shame...)</p>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js">
+    </script>
+    <script>
+      window.addEventListener('load', () => {
+        // Confetti from the right
+        confetti({
+          particleCount: 75,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1, y: 0.6 },
+        });
+        // Confetti from the left
+        confetti({
+          particleCount: 75,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0, y: 0.6 },
+        });
+        // Confetti from bottom
+        confetti({
+          particleCount: 150,
+          angle: 90,
+          spread: 40,
+          origin: { y: 1 },
+          startVelocity: 80,
+        });
       });
-      confetti({
-        particleCount: 75,
-        angle: 60,
-        spread: 55,
-        origin: { x: 0, y: 0.6 },
-      });
-      confetti({
-        particleCount: 150,
-        angle: 90,
-        spread: 40,
-        origin: { y: 1 },
-        startVelocity: 80,
-      });
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
