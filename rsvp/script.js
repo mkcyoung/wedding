@@ -37,34 +37,34 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         
-        // try {
-        //   // Send data to Formspree
-        //   const response = await fetch(event.target.action, {
-        //     method: rsvpForm.method,
-        //     headers: { 
-        //       'Content-Type': 'application/json', 
-        //       'Accept': 'application/json'
-        //     },
-        //     body: JSON.stringify({
-        //       name,
-        //       email,
-        //       message,
-        //       attending,
-        //       plusOne,
-        //       subject: `${name}'s WEDDING RSVP`
-        //     })
-        //   });
+        try {
+          // Send data to Formspree
+          const response = await fetch(event.target.action, {
+            method: rsvpForm.method,
+            headers: { 
+              'Content-Type': 'application/json', 
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              name,
+              email,
+              message,
+              attending,
+              plusOne,
+              subject: `${name}'s WEDDING RSVP`
+            })
+          });
 
-        //   if (response.ok) {
-        //     window.location.href = '/thankyou';
-        //   } else {
-        //     formStatus.classList.remove('hidden');
-        //     formStatus.innerHTML = 'Something went wrong. Please try again.';
-        //   }
-        // } catch (error) {
-        //   formStatus.classList.remove('hidden');
-        //   formStatus.innerHTML = `Error: ${error.message}`;
-        // }
+          if (response.ok) {
+            window.location.href = '/thankyou';
+          } else {
+            formStatus.classList.remove('hidden');
+            formStatus.innerHTML = 'Something went wrong. Please try again.';
+          }
+        } catch (error) {
+          formStatus.classList.remove('hidden');
+          formStatus.innerHTML = `Error: ${error.message}`;
+        }
     });
     }
 });
