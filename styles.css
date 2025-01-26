@@ -269,7 +269,7 @@ footer {
       #rsvp-form select:focus,
       #rsvp-form textarea:focus {
         outline: none;
-        box-shadow: 0 0 2px 2px #c3cee2;
+        box-shadow: 0 0 2px 2px #7599dbb9;
       }
       
       /* Textarea can be slightly taller by default */
@@ -280,7 +280,7 @@ footer {
       
       /* Button styles */
       #rsvp-form button {
-        background: #a6b1c6;
+        background: #7598db;
         color: white;
         padding: 0.75em 1.5em;
         border: none;
@@ -297,20 +297,20 @@ footer {
       #rsvp-form button:hover,
       #rsvp-form button:focus {
         border: none;
-        background: #a6b1c6;
+        background: #7598db;
         animation: rise-shake 1s ease-in-out infinite, pulsate 1s ease-in-out infinite;;
       }
 }
 
 @keyframes pulsate {
     0% {
-        box-shadow: 0 0 5px #c3cee2;
+        box-shadow: 0 0 5px #7598db;
     }
     50% {
-        box-shadow: 0 0 50px #c3cee2;
+        box-shadow: 0 0 50px #7598db;
     }
     100% {
-        box-shadow: 0 0 5px #c3cee2;
+        box-shadow: 0 0 5px #7598db;
     }
 }
 
