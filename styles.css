@@ -231,7 +231,7 @@ footer {
         width: 100%;
         padding: 0.75rem;
         border: none;
-        background: #f8f4ed4e;
+        background: #edf1f8a5;
         border-radius: 5px;
         font-family: inherit;
         font-size: 1rem;
@@ -247,7 +247,7 @@ footer {
       #rsvp-form select:focus,
       #rsvp-form textarea:focus {
         outline: none;
-        box-shadow: 0 0 2px 2px #c9b08a;
+        box-shadow: 0 0 2px 2px #c3cee2;
       }
       
       /* Textarea can be slightly taller by default */
@@ -258,7 +258,7 @@ footer {
       
       /* Button styles */
       #rsvp-form button {
-        background: #b29364df;
+        background: #a6b1c6;
         color: white;
         padding: 0.75em 1.5em;
         border: none;
@@ -275,20 +275,20 @@ footer {
       #rsvp-form button:hover,
       #rsvp-form button:focus {
         border: none;
-        background: #b29364;
+        background: #a6b1c6;
         animation: rise-shake 1s ease-in-out infinite, pulsate 1s ease-in-out infinite;;
       }
 }
 
 @keyframes pulsate {
     0% {
-        box-shadow: 0 0 5px #b29364;
+        box-shadow: 0 0 5px #c3cee2;
     }
     50% {
-        box-shadow: 0 0 50px #b29364;
+        box-shadow: 0 0 50px #c3cee2;
     }
     100% {
-        box-shadow: 0 0 5px #b29364;
+        box-shadow: 0 0 5px #c3cee2;
     }
 }
 
