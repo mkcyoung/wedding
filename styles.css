@@ -420,6 +420,14 @@ footer {
         }
     }
 
+    #registry-wrapper {
+        padding: 1.5rem;
+
+        #registry-details {
+            padding: 1.5rem;
+        }
+    }
+
     #photo-gallery {
         padding: 1.5rem;
         flex-direction: column;
