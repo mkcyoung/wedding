@@ -168,6 +168,28 @@ nav {
     }
 }
 
+#photo-gallery {
+    background-color: white;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    img {
+        object-fit: contain;
+        height: 100%;
+    }
+
+    .six-piece {
+        width: 38.5%;
+    }
+
+    .four-piece {
+        width: 30.75%;
+    }
+}
+
 footer {
     display: flex;
     justify-content: center;
@@ -395,6 +417,15 @@ footer {
                 flex-direction: column;
                 width: 100%;
             }
+        }
+    }
+
+    #photo-gallery {
+        padding: 1.5rem;
+        flex-direction: column;
+
+        .six-piece, .four-piece {
+            width: 100%;
         }
     }
 
