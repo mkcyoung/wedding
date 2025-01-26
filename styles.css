@@ -1,3 +1,10 @@
+/* COLORS */
+/* #f8f4ed */ /* primary background */
+
+
+
+/* ####### SHARED ##########*/
+
 * {
     margin: 0;
     padding: 0;
@@ -6,14 +13,37 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    background-color: white;
-    margin: 0 auto;
     color: #333;
+    background-color: #f8f4ed;
 }
 
 .primary-bg {
-    background-color: #f0e9dd;
+    background-color: #f8f4ed;
+}
+
+h1 {    
+    font-size: 3.75rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+.hidden {
+    display: none;
+}
+
+.gradient-text {
+    background-image: linear-gradient(#9c886a, #5b4b33);
+    color: transparent;
+    background-clip: text;
 }
 
 nav {
@@ -22,7 +52,6 @@ nav {
     align-items: center;
     justify-content: space-between;
     top: 0;
-    background-color: #f0e9dd;
     padding: .75rem 2rem;
 
     span{
@@ -59,11 +88,94 @@ nav {
     }
 }
 
-#main-content {
-    padding: 0 10%;
-    max-width: 1200px;
-    background-color: #f0e9dd;
+/* ###### MAIN PAGE ######### */
+
+#hero {
+    padding: 2rem 2rem 4rem 2rem;
+    background-color: #f8f4ed;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+
+    img {
+        max-width: 800px;
+        width: 100%;
+        height: auto;
+    }
+
+    #date-and-description {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+
+        #description {
+            max-width: 700px;
+            font-size: 1.5rem;
+        }
+    }
 }
+
+#details-wrapper{
+    background-color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    #details {
+        background-color: #f8f4ed;
+        display: flex;
+        border: 2px solid white;
+        border-radius: 8px;
+        padding: 3rem;
+        gap: 2rem;
+        justify-content: center;
+        align-items: start;
+        flex-direction: row;
+    
+        .schedule-item {
+            display: flex;
+            gap: 0.5rem;
+            align-items: start;
+            flex-direction: column;
+            width: 50%;
+        }
+    }
+}
+
+#registry-wrapper {
+    background-color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    #registry-details {
+        background-color: #f8f4ed;
+        display: flex;
+        border: 2px solid white;
+        border-radius: 8px;
+        padding: 3rem;
+        gap: 2rem;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+
+/* ###### RSVP PAGE ######### */
 
 #rsvp-page {
     display: flex;
@@ -71,11 +183,6 @@ nav {
     gap: 1rem;
     align-items: center;
     margin: 2rem;
-    h1 {
-        background-image: linear-gradient(#c9b08a, #756142);
-        color: transparent;
-        background-clip: text;
-    }
 
     #rsvp-form {
         display: flex;
@@ -124,7 +231,7 @@ nav {
         width: 100%;
         padding: 0.75rem;
         border: none;
-        background: #f0e9dd4e;
+        background: #f8f4ed4e;
         border-radius: 5px;
         font-family: inherit;
         font-size: 1rem;
@@ -212,17 +319,14 @@ nav {
     }
 }
 
+/* ##### THANK YOU PAGE ###### */
+
 #thank-you-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2rem;
 
-    h1 {
-        background-image: linear-gradient(#9c886a, #5b4b33);
-        color: transparent;
-        background-clip: text;
-    }
     .subtitle {
         font-size: 1rem;
         font-weight: 400;
@@ -240,117 +344,52 @@ nav {
     }
 }
 
-header {
-    text-align: center;
-    padding: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    align-items: center;
-}
-
-h1 {    
-    font-size: 3.75rem;
-    font-weight: 600;
-    margin: 0;
-}
-
-section {
-    margin: 0rem auto;
-    max-width: 800px;
-    text-align: center;
-}
-
-#date-and-rsvp {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    #description{
-        font-size: 1.5rem;
-    }
-}
-
-#details-wrapper{
-    background-color: #f0e9dd;
-    padding: 2rem;
-    border: 2rem solid white;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-
-    h2 {
-        font-size: 2.5rem;
-        margin: 0;
-    }
-
-    #details {
-        display: flex;
-        gap: 2rem;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-    
-        .schedule-item {
-            display: flex;
-            gap: 0.5rem;
-            align-items: center;
-            flex-direction: column;
-            width: 33%;
-            
-            h3 {
-                font-size: 1.5rem;
-                margin: 0;
-            }
-        }
-    }
-}
-
-#registry-wrapper {
-    margin-bottom: 5rem;
-
-    h2 {
-        margin: 0;
-        font-size: 2.5rem;
-    }
-}
-
-
-
-img {
-    max-width: 75%;
-    max-height: auto;
-}
+/* ###### RESPONSIVE ADJUSTMENTS ######### */
 
 @media (max-width: 600px) {
     nav{
         padding: .75rem 1rem;
     }
 
-    header {
-        padding: 2rem 1rem;
+    #hero {
         gap: 1.5rem;
+        #date-and-description {
+            #description{
+                font-size: 1.25rem;
+            }
+        }
     }
+
     h1 {
         font-size: 2.5rem;
     }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
     img {
         max-width: 100%;
     }
+
     #rsvp-page {
         margin: 0.5rem 1rem;
     }
     #details-wrapper {
-        margin-top: 1rem;
+        padding: 1.5rem;
+
         #details {
             flex-direction: column;
+            padding: 1.5rem;
     
             .schedule-item {
                 display: flex;
                 gap: 0.5rem;
-                align-items: center;
+                align-items: start;
                 flex-direction: column;
                 width: 100%;
             }
@@ -358,8 +397,3 @@ img {
     }
 
 }
-
-.hidden {
-    display: none;
-}
-  
