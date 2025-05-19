@@ -40,6 +40,10 @@ h3 {
     display: none;
 }
 
+.italic {
+    font-style: italic;
+}
+
 .gradient-text {
     background-image: linear-gradient(#9c886a, #5b4b33);
     color: transparent;
@@ -134,13 +138,13 @@ nav {
         padding: 3rem;
         gap: 2rem;
         justify-content: center;
-        align-items: start;
-        flex-direction: row;
+        align-items: center;
+        flex-direction: column;
     
         .schedule-item {
             display: flex;
-            gap: 0.5rem;
-            align-items: start;
+            gap: 1rem;
+            align-items: center;
             flex-direction: column;
             width: 50%;
         }
@@ -153,18 +157,32 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 
     #registry-details {
-        background-color: #f8f4ed;
         display: flex;
         border: 2px solid white;
         border-radius: 8px;
-        padding: 3rem;
+        padding-right: 3rem;
+        padding-left: 3rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
         gap: 2rem;
         justify-content: center;
-        align-items: start;
+        align-items: center;
         flex-direction: column;
+
+        #payment-details{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            img {
+                object-fit: contain;
+                height: 100%;
+                width: 40%;
+            }
+        }
     }
 }
 
@@ -412,8 +430,8 @@ footer {
     
             .schedule-item {
                 display: flex;
-                gap: 0.5rem;
-                align-items: start;
+                gap: 0.75rem;
+                align-items: center;
                 flex-direction: column;
                 width: 100%;
             }
@@ -425,6 +443,12 @@ footer {
 
         #registry-details {
             padding: 1.5rem;
+            #payment-details{
+                flex-direction: column;
+                img{
+                    width: 100%;
+                }
+            }
         }
     }
 
@@ -437,4 +461,41 @@ footer {
         }
     }
 
+}
+
+/* Use flex for spacing between schedule events */
+.schedule-events {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+/* Minimal styling for links in schedule events */
+.schedule-events a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.2s ease-in-out;
+}
+
+.schedule-events a:hover {
+    border-bottom: 1px solid #333;
+}
+
+.event {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.event-description {
+    text-align: center;
+    font-size: 1.05rem;
+}
+
+.event-title {
+    display: flex;
+    justify-content: space-between;
 }
